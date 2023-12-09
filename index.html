@@ -55,7 +55,7 @@
             document.getElementById('form').style.display = 'block';
             document.getElementById('form').style.visibility = 'visible';
         
-            document.getElementById('name').value = 'loxxxxxx';
+            document.getElementById('name').value = tg.initDataUnsafe.user.first_name + ' ' + tg.initDataUnsafe.user.last_name;
         });
 
        order.addEventListener("click", () => {
