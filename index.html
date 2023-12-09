@@ -57,7 +57,17 @@
             document.getElementById('name').value = tg.initDataUnsafe.user.first_name + ' ' + tg.initDataUnsafe.user.last_name
         });
 
-        order.addEventListener('click', () => {
+       order.addEventListener('click', () => {
+        let name = document.getElementById('name').value;
+        let email = document.getElementById('email').value;
+        let phone = document.getElementById('phone').value;
+
+        let data = {
+            name: name,
+            email: email,
+            phone: phone
+        }
+        tg.sendData(JSON.stringify(data));
         tg.close();
         });
     </script>
