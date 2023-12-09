@@ -11,13 +11,53 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8 text-center">
-                <h2 class="text-white">Johnny Silverhand</h2>
-                <img src="/JohnnyUltimateEdition.png" class="img-fluid" alt="...">
-                <br></br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe cumque, laborum eveniet voluptatem quos sapiente dignissimos quas quod hic ipsam omnis autem consequuntur laboriosam quis nulla tempore perferendis expedita dolore earum, beatae praesentium. Aspernatur corrupti aperiam minima blanditiis enim. Culpa ut maxime ad temporibus excepturi magni quis quod dolores perferendis.</p>
+                <div id="main">
+                    <h2 class="text-white">Johnny Silverhand</h2>
+                    <img src="/JohnnyUltimateEdition.png" class="img-fluid" alt="...">
+                    <br></br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe cumque, laborum eveniet voluptatem quos sapiente dignissimos quas quod hic ipsam omnis autem consequuntur laboriosam quis nulla tempore perferendis expedita dolore earum, beatae praesentium. Aspernatur corrupti aperiam minima blanditiis enim. Culpa ut maxime ad temporibus excepturi magni quis quod dolores perferendis.</p>
+                    <button id="buy" class="btn btn-info btn-lg">Купить</button>
+                    <br></br>
+                </div>    
+                <form id="form" name="form" class="mt-5 pt-5">
+                    <div class="mb-3 row">
+                        <label for="inputName" class="col-sm-2 col-form-label" id="name">Имя</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="inputName">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label" id="email">Email</label>
+                        <div class="col-sm-10">
+                        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="inputPhone" class="col-sm-2 col-form-label" id="phone">Телефон</label>
+                        <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPhone">
+                        </div>
+                    </div>
+                    <button id="order" class="btn btn-info btn-lg">Оформить</button>
+                </form>    
             </div>
         </div>
-    </div> 
+    </div>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        let th = window.Telegram.WebApp;
+        let buy = document.getElementById('buy');
+        let order = document.getElementById('order');
+
+        buy.addEventListener('click', () => {
+            document.getElementById('main').style.display = 'none';
+            document.getElementById('form').style.display = 'block';
+            document.getElementById('name').value = tb.initDataUnsafe.user.first_name + ' ' + b.initDataUnsafe.user.last_name
+        });
+
+        order.addEventListener('click', () => {
+        tg.close();
+        });
+    </script>
 </body>
 </html>
