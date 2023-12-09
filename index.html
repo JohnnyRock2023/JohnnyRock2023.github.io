@@ -45,8 +45,31 @@
     </div>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
-      
+        let tg = window.Telegram.WebApp;
+        let buy = document.getElementById('buy');
+        let order = document.getElementById('order');
+        tg.expend();
+
+        buy.addEventListener('click', () => {
+            document.getElementById('main').style.display = 'none';
+            document.getElementById('form').style.display = 'block';
+            document.getElementById('form').style.visibility = 'visible';
+            document.getElementById('name').value = tg.initDataUnsafe.user.first_name + ' ' + tg.initDataUnsafe.user.last_name
+        });
+
+       order.addEventListener('click', () => {
+        let name = document.getElementById('name').value;
+        let email = document.getElementById('email').value;
+        let phone = document.getElementById('phone').value;
+
+        let data = {
+            name: name,
+            email: email,
+            phone: phone
+        }
+        tg.sendData(JSON.stringify(data));
         tg.close();
+        });
     </script>
 </body>
 </html>
