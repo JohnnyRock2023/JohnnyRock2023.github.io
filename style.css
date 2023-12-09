@@ -14,6 +14,6 @@ button {
 };
 
 form {
-    display: none;
+    display: none !important;
 }
 
