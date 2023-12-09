@@ -10,10 +10,12 @@ button {
 };
 
 #form {
-    display: none !important;
-};
+    display: none;
+    visibility: hidden;
+}
 
 form {
-    display: none !important;
+    display: none;
+    visibility: hidden;
 }
 
