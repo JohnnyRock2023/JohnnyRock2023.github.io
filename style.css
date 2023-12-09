@@ -1,8 +1,19 @@
 body {
     background-color: var(--tg-theme-bg-color);
-}
+    height: 100vh;
+    width: 100vw;
+};
 
 button {
     background-color: var(--tg-theme-button-color) !important;
     color: var(--tg-theme-button-text-color) !important;
+};
+
+#form {
+    display: none;
 }
+
+form {
+    display: none;
+}
+
