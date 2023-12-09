@@ -10,9 +10,4 @@ button {
     color: var(--tg-theme-button-text-color) !important;
 };
 
-#form {
-    display: none !important;
-    visibility: hidden !important;
-}
-
 
